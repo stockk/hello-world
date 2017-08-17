@@ -17,9 +17,9 @@ public class MessageFactoryTest {
         for (int i = 6; i < 9; i++) {
             String message = messageFactory.getMessage(i).getText();
             switch(language){
-                case "en": assertEquals("Good morning, World!", message);
-                    break;
                 case "ru": assertEquals("Доброе утро, Мир!", message);
+                    break;
+                default: assertEquals("Good morning, World!", message);
                     break;
             }
         }
@@ -33,9 +33,9 @@ public class MessageFactoryTest {
         for (int i = 9; i < 19; i++) {
             String message = messageFactory.getMessage(i).getText();
             switch(language){
-                case "en": assertEquals("Good day, World!", message);
-                    break;
                 case "ru": assertEquals("Добрый день, Мир!", message);
+                    break;
+                default: assertEquals("Good day, World!", message);
                     break;
             }
         }
@@ -48,9 +48,9 @@ public class MessageFactoryTest {
         for (int i = 19; i < 23; i++) {
             String message = messageFactory.getMessage(i).getText();
             switch(language){
-                case "en": assertEquals("Good evening, World!", message);
-                    break;
                 case "ru": assertEquals("Добрый вечер, Мир!", message);
+                    break;
+                default: assertEquals("Good evening, World!", message);
                     break;
             }
         }
@@ -64,9 +64,9 @@ public class MessageFactoryTest {
         for (int i : nightnList) {
             String message = messageFactory.getMessage(i).getText();
             switch(language){
-                case "en": assertEquals("Good night, World!", message);
-                    break;
                 case "ru": assertEquals("Доброй ночи, Мир!", message);
+                    break;
+                default: assertEquals("Good night, World!", message);
                     break;
             }
         }
