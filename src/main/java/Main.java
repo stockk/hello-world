@@ -1,5 +1,3 @@
-import factory.MessageFactory;
-
 import java.util.Calendar;
 import java.util.logging.Logger;
 
@@ -17,8 +15,8 @@ public class Main {
         Calendar rightNow = Calendar.getInstance();
         int hour = rightNow.get(Calendar.HOUR_OF_DAY);
 
-        MessageFactory message = new MessageFactory();
-        System.out.println(message.getMessage(hour).getText());
+        Message message = new Message();
+        System.out.println(message.getText(hour));
 
         LOGGER.info("hello-world application finished work");
      }
