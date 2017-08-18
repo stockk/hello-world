@@ -17,22 +17,22 @@ public class Message {
             throw new IllegalArgumentException("Hours can not be less than zero or more then 23.");
         }
 
-        String textMessage;
+        String message;
 
         if ( hours >= 6 && hours < 9){
-            textMessage = ResourceBundle.getBundle("application", Locale.getDefault()).getString("morning");
+            message = ResourceBundle.getBundle("application", Locale.getDefault()).getString("morning");
         }
         else if (hours >= 9 && hours < 19){
-            textMessage = ResourceBundle.getBundle("application", Locale.getDefault()).getString("day");;
+            message = ResourceBundle.getBundle("application", Locale.getDefault()).getString("day");;
         }
         else if (hours >= 19 && hours < 23){
-            textMessage = ResourceBundle.getBundle("application", Locale.getDefault()).getString("evening");
+            message = ResourceBundle.getBundle("application", Locale.getDefault()).getString("evening");
         }
-        else textMessage = ResourceBundle.getBundle("application", Locale.getDefault()).getString("night");
+        else message = ResourceBundle.getBundle("application", Locale.getDefault()).getString("night");
 
-        LOGGER.info("The message: {" + textMessage + "} was taken from properties file");
+        LOGGER.info("The message: {" + message + "} was taken from properties file");
 
-        return textMessage;
+        return message;
     }
 
 }
